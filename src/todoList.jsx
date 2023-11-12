@@ -22,7 +22,7 @@ const Todoreducer=(state, action) => {
         });
         return { todos: updatedTodos };
     case 'delete-todo':
-      const filteredTodos = state.todos.filter(( index) => index !== action.index);
+      const filteredTodos = state.todos.filter((_, index) => index !== action.index);
         return { todos: filteredTodos };
     default:
         return state;
